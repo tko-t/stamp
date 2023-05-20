@@ -44,7 +44,7 @@ class Overlap
   # ANSIカラーコードをHTMLに変換してテーブル化
   # カスタムしたログだとうまく表示されないかも
   def compare_log
-    log = File.read("/app/log").match(/#{@stamp_number_a}.+#{@stamp_number_b}/m).to_s
+    log = File.read(Settings.log).match(/#{@stamp_number_a}.+#{@stamp_number_b}/m).to_s
 
     log_rows = log.split("\n").map do |line|
       next if line.strip.blank? # 空行は除外

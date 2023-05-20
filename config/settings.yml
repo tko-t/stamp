@@ -13,3 +13,5 @@ ignore_tables:
 stamp_path: stamps
 repository: https://github.com/<ORG>/<REPO>
 branch: <BRANCH>
+
+log: '/app/log'

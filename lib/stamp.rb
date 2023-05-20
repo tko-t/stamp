@@ -17,7 +17,7 @@ class Stamp
       FileUtils.rm_r(path)
     end
 
-    File.truncate("/app/log", 0)
+    File.truncate(Settings.log, 0)
   end
 
   def initialize(stamp_name=nil)
@@ -31,7 +31,7 @@ class Stamp
     output(stamps, stamp_file)
 
     # ログの末尾にマーク
-    File.open("/app/log", "ab") do |f|
+    File.open(Settings.log, "ab") do |f|
       f.puts log_stamp
     end
   end
